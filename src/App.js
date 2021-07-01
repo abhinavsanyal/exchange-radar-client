@@ -41,7 +41,7 @@ const authLink = setContext((_, { headers }) => {
 
 const link = from([
   errorLink,
-  new HttpLink({ uri: "http://localhost:3001/anyfinExchangeRadar" }),
+  new HttpLink({ uri: `http://localhost:3001/anyfinExchangeRadar` }),
 ]);
 
 const client = new ApolloClient({
