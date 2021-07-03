@@ -17,7 +17,7 @@ import {
 const Header = (props) => {
   const history = useHistory();
   const [userFullName, setUserFullName] = React.useState("");
-  const { data } = useQuery(GET_USER);
+  const { data } = useQuery(GET_USER,{fetchPolicy: "no-cache"});
 
   React.useEffect(()=>{
     if(data){

@@ -27,6 +27,7 @@ const Dashboard = (props) => {
   // Fetching the logged-in user's list of countries.
   const { data: addedList, refetch } = useQuery(GET_ADDED_COUNTRIES_QUERY, {
     variables: { limit, cursor },
+    fetchPolicy: "no-cache"
   });
   const [addCountry, { data }] = useMutation(ADD_COUNTRY_MUTATION);
 
